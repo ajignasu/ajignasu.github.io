@@ -3,57 +3,88 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Anushrut Jignasu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="website icon link" />
     <style>
+        :root {
+        --text: #111;
+        --muted: #555;
+        --link: #004fff;
+        --card-gap: 20px;
+        }
+        html, body { margin: 0; padding: 0; background: #fff; color: var(--text); }
         .main-content {
-            font-family: Montserrat;
-            font-size: 24px;
-            position: absolute;
-            top: 5.0%;
-            left: 10%;
-            right: 10%;
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 980px;
+        margin: 5% auto 8%;
+        padding: 0 20px;
         }
-
-        .spacing {
-            padding: 0 20px; /* Adjust the spacing between image and description */
-        }
-
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .spacing { padding: 0 20px; }
+        h1 { font-size: 34px; margin: 0 0 6px; }
+        h2 { font-size: 28px; margin: 32px 0 10px; }
+        h3 { margin: 16px 0 6px; }
         .publication-venue {
-            font-size: 24px;
-            font-style: italic;
-            margin-bottom: 10px;
-            color: #888888; /* Light gray color */
+        font-size: 18px;
+        font-style: italic;
+        margin-bottom: 10px;
+        color: var(--muted);
         }
-    </style>
+        /* Reviewer section layout */
+        .reviewer {
+        display: flex; gap: 50px; font-size: 18px; flex-wrap: wrap;
+        }
+        .reviewer > div { min-width: 260px; }
+        .header-grid {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: start;
+        }
+        .avatar {
+        height: 296px; width: 320px; border-radius: 50%; object-fit: cover;
+        }
+        .advisor {
+        white-space: nowrap;
+        color: var(--link);
+        text-decoration: none;
+        }
+  </style>
 </head>
 
-<body bgcolor="#FFFFFF">
+
+<body>
 
 <div class="main-content">
     <table style="font-size:18px;">
         <tr>
             <td colspan="3" valign="top">
                 <h2> Anushrut Jignasu </h2>
-                Email: ajignasu@iastate.edu
+                Email: <a href="mailto:ajignasu@iastate.edu">ajignasu@iastate.edu</a>
+
                 <br>
-                <a href="https://scholar.google.com/citations?user=Gb_YM5oAAAAJ&hl=en&oi=ao" style="text-decoration: none">Google Scholar</a> /
-                <a href="https://github.com/ajignasu" style="text-decoration: none">GitHub</a> /
-                <a href="files/CV.pdf" style="text-decoration: none">CV</a>
+                <a href="https://scholar.google.com/citations?user=Gb_YM5oAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a> /
+                <a href="https://github.com/ajignasu" target="_blank" rel="noopener">GitHub</a> /
+                <a href="files/CV.pdf" target="_blank" rel="noopener">CV</a>
                 <br><br>
-                I am a PhD candidate at Iowa State University, advised by <a href="https://web.me.iastate.edu/idealab/p-krishnamurthy.html" style="text-decoration: none"> Prof. Adarsh Krishnamurthy.</a>
+                I am a PhD candidate at Iowa State University, advised by
+                <a href="https://web.me.iastate.edu/idealab/p-krishnamurthy.html" class="advisor">Prof. Adarsh&nbsp;Krishnamurthy</a>.
+
                 <br><br>
-                My research lies at the intersection of computer vision, computer graphics, and machine learning. Specifically, I work on neural fields, 3D reconstruction, large language models for geometric reasoning, and additive manufacturing.
+                My research lies at the intersection of computer vision, computer graphics, and machine learning. Specifically, I work on neural fields, 3D reconstruction, CAD, large language models for geometric reasoning, and additive manufacturing.
                 <br><br>
                 <p style="color:rgb(0, 81, 255);"><b>I am seeking full-time positions (December 2025 onwards)&mdash;feel free to reach out!</b></p>
             </td>
             <td class="spacing"></td>
             <td colspan="1" align="center">
-                <a href="" style="text-decoration: none">
-                    <!-- <img src="imgs/portrait.png" style="height: 473px; width: 512px;" align="center" /> -->
-                    <!-- <img src="imgs/portrait.png" style="height: 296px; width: 320px;" align="center" /> -->
-                    <img src="imgs/portrait.png" style="height: 296px; width: 320px; border-radius: 50%; object-fit: cover;" align="center" />
-                </a>
+                <img src="imgs/portrait.png" style="height: 296px; width: 320px; border-radius: 50%; object-fit: cover;" align="center" />
             </td>
         </tr>
 
@@ -69,10 +100,7 @@
                 <br>
                 <i>San Francisco, Summer 2025</i>
                 <br>
-                <!-- <p>Developed a scalable framework for ML-based CAD assembly completion, increasing top-1 accuracy by 40 % over baselines.</p> -->
-                <p>Designed a scalable framework for ML-based CAD assembly completion, achieving a 40% improvement in top-1 accuracy over existing baselines.</p>
-
-                
+                <p>Designed a scalable framework for ML-based CAD assembly completion, achieving a 30% improvement in top-1 accuracy over existing baselines.</p>
             </td>
         </tr>
 
@@ -82,8 +110,7 @@
                 <br>
                 <i>Los Angeles, Summer 2024</i>
                 <br>
-                <p>Developed differentiable algorithms for SMPL-based mesh deformation and pose estimation, enabling landmark-free pose convergence.</p>
-                
+                <p>Developed differentiable algorithms for SMPL-based mesh deformation and pose estimation, enabling landmark-free pose convergence.</p> 
             </td>
         </tr>
 
@@ -93,199 +120,213 @@
                 <h2>Publications</h2>
             </td>
         </tr>
-
+        
         <tr>
             <td>
                 <h3>2024</h3>
             </td>
         </tr>
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Slice-100K: A Multimodal Dataset for Extrusion-based 3D Printing</strong>
-            <br>
-            <u> Anushrut Jignasu</u>, <a style="text-decoration: none">Kelly O. Marshall</a>, <a style="text-decoration: none">Ankush Kumar Mishra</a>, <a style="text-decoration: none">Lucas Nerone Rillo</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>, <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Chinmay Hegde</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <!-- <div class="publication-venue">NeurIPS 2024 (Datasets and Benchmark Track)</div> -->
-            <i>NeurIPS 2024 (Datasets and Benchmark Track)</i>
-            <br>
-            [<a href="https://arxiv.org/abs/2407.04180" style="text-decoration: none">ArXiv</a>] [<a href="https://github.com/idealab-isu/SLICE-100K" style="text-decoration: none">Github</a>] [<a href="https://slice-100k.github.io/" style="text-decoration: none">Dataset</a>]
-            </td>
-            <!-- <td colspan="2" valign="middle">
-                <a>
-                    <!-- <img src="imgs/slice100k.png" style="width: 100%; max-width: 400px; height: auto;" alt="Description of Image" /> -->
-                </a>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Slice-100K: A Multimodal Dataset for Extrusion-based 3D Printing</strong><br>
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Kelly O. Marshall</span>, <span>Ankush Kumar Mishra</span>, <span>Lucas Nerone Rillo</span>,
+                <span>Baskar Ganapathysubramanian</span>, <span>Aditya Balu</span>, <span>Chinmay Hegde</span>,
+                and <span>Adarsh Krishnamurthy</span><br>
+                <i>NeurIPS 2024 (Datasets and Benchmark Track)</i><br>
+                [<a href="https://arxiv.org/abs/2407.04180" target="_blank" rel="noopener">ArXiv</a>]
+                [<a href="https://github.com/idealab-isu/SLICE-100K" target="_blank" rel="noopener">Github</a>]
+                [<a href="https://slice-100k.github.io/" target="_blank" rel="noopener">Dataset</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>SDFConnect: Neural Implicit Surface Reconstruction of a Sparse Point Cloud with Topological Constraints</strong>
-            <br>
-            <u> Anushrut Jignasu</u>, <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Soumik Sarkar</a>, <a style="text-decoration: none">Chinmay Hegde</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Deep Learning for Geometric Computing (DLGC) Workshop, CVPR 2024</i>
-            <br>
-            [<a href="https://openaccess.thecvf.com/content/CVPR2024W/DLGC/html/Jignasu_SDFConnect_Neural_Implicit_Surface_Reconstruction_of_a_Sparse_Point_Cloud_CVPRW_2024_paper.html" style="text-decoration: none">Link</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>SDFConnect: Neural Implicit Surface Reconstruction of a Sparse Point Cloud with Topological Constraints</strong><br>
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Aditya Balu</span>, <span>Soumik Sarkar</span>, <span>Chinmay Hegde</span>,
+                <span>Baskar Ganapathysubramanian</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>Deep Learning for Geometric Computing (DLGC) Workshop, CVPR 2024</i><br>
+                [<a href="https://openaccess.thecvf.com/content/CVPR2024W/DLGC/html/Jignasu_SDFConnect_Neural_Implicit_Surface_Reconstruction_of_a_Sparse_Point_Cloud_CVPRW_2024_paper.html" target="_blank"
+                    rel="noopener">Link</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>NURBS-based Path Planning for Aerosol Jet Printing of Conformal Electronics</strong>
-            <br>
-            <u> Anushrut Jignasu</u>, <a style="text-decoration: none">Jeremy Rurup</a>, <a style="text-decoration: none">Ethan Secor</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Accepted to Journal of Manufacturing Processes, 2024</i>
-            <br>
-            [<a href="https://www.sciencedirect.com/science/article/pii/S1526612524002469" style="text-decoration: none">Journal</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>NURBS-based Path Planning for Aerosol Jet Printing of Conformal Electronics</strong><br>
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Jeremy Rurup</span>, <span>Ethan Secor</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>Accepted to Journal of Manufacturing Processes, 2024</i><br>
+                [<a href="https://www.sciencedirect.com/science/article/pii/S1526612524002469" target="_blank" rel="noopener">Journal</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Evaluating NeRFs for 3D Plant Geometry Reconstruction in Field Conditions</strong>
-            <br>
-            <a>Muhammad Arbab Arshad</a>, <a style="text-decoration: none">Talukder Jubery</a>, <a style="text-decoration: none">James  Afful</a>, <u> Anushrut Jignasu</u>, <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>,  <a style="text-decoration: none">Soumik Sarkar</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            [<a href="https://arxiv.org/abs/2402.10344" style="text-decoration: none">ArXiv</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Evaluating NeRFs for 3D Plant Geometry Reconstruction in Field Conditions</strong><br>
+                <span>Muhammad Arbab Arshad</span>, <span>Talukder Jubery</span>, <span>James Afful</span>,
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Aditya Balu</span>, <span>Baskar Ganapathysubramanian</span>,
+                <span>Soumik Sarkar</span>, and <span>Adarsh Krishnamurthy</span><br>
+                [<a href="https://arxiv.org/abs/2402.10344" target="_blank" rel="noopener">ArXiv</a>]
             </td>
         </tr>
-
+        
         <tr>
             <td>
                 <h3>2023</h3>
             </td>
         </tr>
-
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Towards Foundational AI Models for Additive Manufacturing: Language Models for G-Code Debugging, Manipulation, and Comprehension</strong>
-            <br>
-            <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Kelly Marshall</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>, <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Chinmay Hegde</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            [<a href="https://arxiv.org/abs/2309.02465" style="text-decoration: none">ArXiv</a>] [<a href="https://github.com/idealab-isu/LLM4GCode" style="text-decoration: none">GitHub</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Towards Foundational AI Models for Additive Manufacturing: Language Models for G-Code Debugging, Manipulation, and Comprehension</strong><br>
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Kelly Marshall</span>, <span>Baskar Ganapathysubramanian</span>, <span>Aditya Balu</span>,
+                <span>Chinmay Hegde</span>, and <span>Adarsh Krishnamurthy</span><br>
+                [<a href="https://arxiv.org/abs/2309.02465" target="_blank" rel="noopener">ArXiv</a>]
+                [<a href="https://github.com/idealab-isu/LLM4GCode" target="_blank" rel="noopener">GitHub</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>ZeroForge: Feedforward Text-to-Shape Without 3D Supervision</strong>
-                <br>
-                <a style="text-decoration: none">Kelly Marshall</a>, <a style="text-decoration: none">Minh Pham</a>, <a style="text-decoration: none">Ameya Joshi</a>, <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Aditya
-                    Balu</a>, <a style="text-decoration: none">Adarsh Krishnamurthy</a>, and <a style="text-decoration: none">Chinmay Hegde</a>
-                <br>
-                [<a href="https://arxiv.org/abs/2306.08183" style="text-decoration: none">ArXiv</a>] [<a href="https://github.com/Km3888/ZeroForge" style="text-decoration: none">GitHub</a>]
-                <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>ZeroForge: Feedforward Text-to-Shape Without 3D Supervision</strong><br>
+                <span>Kelly Marshall</span>, <span>Minh Pham</span>, <span>Ameya Joshi</span>,
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Aditya Balu</span>, <span>Adarsh Krishnamurthy</span>, and <span>Chinmay Hegde</span><br>
+                [<a href="https://arxiv.org/abs/2306.08183" target="_blank" rel="noopener">ArXiv</a>]
+                [<a href="https://github.com/Km3888/ZeroForge" target="_blank" rel="noopener">GitHub</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Deep Learning-based 3D Multigrid Topology Optimization of Manufacturable Designs</strong>
-            <br>
-            <a style="text-decoration: none">Jaydeep Rade</a>, <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Ethan Herron</a>, <a style="text-decoration: none">Ashton Corpuz</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>, <a style="text-decoration: none">Soumik Sarkar</a>, <a style="text-decoration: none">Aditya Balu</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Accepted to Engineering Applications of Artificial Intelligence (EAAI) Journal, 2023</i>
-            <br>
-            [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197623012174" style="text-decoration: none">Journal</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Deep Learning-based 3D Multigrid Topology Optimization of Manufacturable Designs</strong><br>
+                <span>Jaydeep Rade</span>, <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Ethan Herron</span>, <span>Ashton Corpuz</span>, <span>Baskar Ganapathysubramanian</span>,
+                <span>Soumik Sarkar</span>, <span>Aditya Balu</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>Accepted to Engineering Applications of Artificial Intelligence (EAAI) Journal, 2023</i><br>
+                [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0952197623012174" target="_blank" rel="noopener">Journal</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Conformal Aerosol Jet Printing using a 3-Axis Printer</strong>
-            <br>
-            <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Jeremy Rurup</a>, <a style="text-decoration: none">Ethan Secor</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>51st SME North American Manufacturing Research Conference (NAMRC), 2023</i>
-            <br>
-            [<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213846323000688" style="text-decoration: none">Journal</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Conformal Aerosol Jet Printing using a 3-Axis Printer</strong><br>
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Jeremy Rurup</span>, <span>Ethan Secor</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>51st SME North American Manufacturing Research Conference (NAMRC), 2023</i><br>
+                [<a href="https://www.sciencedirect.com/science/article/abs/pii/S2213846323000688" target="_blank" rel="noopener">Journal</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Latent Diffusion Models for Structural Component Design</strong>
-            <br>
-            <a style="text-decoration: none">Ethan Herron</a>, <a style="text-decoration: none">Jaydeep Rade</a>, <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>,  <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Soumik Sarkar</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Accepted to Computed Aided Design (CAD) Journal, 2024</i>
-            <br>
-            [<a href="https://arxiv.org/abs/2309.11601" style="text-decoration: none">ArXiv</a>] [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0010448524000344" style="text-decoration: none">Journal</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Latent Diffusion Models for Structural Component Design</strong><br>
+                <span>Ethan Herron</span>, <span>Jaydeep Rade</span>,
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Baskar Ganapathysubramanian</span>, <span>Aditya Balu</span>,
+                <span>Soumik Sarkar</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>Accepted to Computer-Aided Design (CAD) Journal, 2024</i><br>
+                [<a href="https://arxiv.org/abs/2309.11601" target="_blank" rel="noopener">ArXiv</a>]
+                [<a href="https://www.sciencedirect.com/science/article/abs/pii/S0010448524000344" target="_blank" rel="noopener">Journal</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Plant Geometry Reconstruction from Field Data using Neural Radiance Fields</strong>
-            <br>
-            <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Ethan Herron</a>, <a style="text-decoration: none">Talukdar Jubery</a>, <a style="text-decoration: none">James Afful</a>, <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>, <a style="text-decoration: none">Soumik Sarkar</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>2nd Workshop on AI for Agriculture and Food Systems at AAAI 2023</i>
-            <br>
-            [<a href="https://openreview.net/forum?id=TvKKqWn_-6" style="text-decoration: none">OpenReview</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Plant Geometry Reconstruction from Field Data using Neural Radiance Fields</strong><br>
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Ethan Herron</span>, <span>Talukder Jubery</span>, <span>James Afful</span>,
+                <span>Aditya Balu</span>, <span>Baskar Ganapathysubramanian</span>,
+                <span>Soumik Sarkar</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>2nd Workshop on AI for Agriculture and Food Systems at AAAI 2023</i><br>
+                [<a href="https://openreview.net/forum?id=TvKKqWn_-6" target="_blank" rel="noopener">OpenReview</a>]
             </td>
         </tr>
-
+        
         <tr>
             <td>
                 <h3>2022</h3>
             </td>
         </tr>
-
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Multigrid Distributed Deep CNNs for Structural Topology Optimization</strong>
-            <br>
-            <a style="text-decoration: none">Jaydeep Rade</a>, <a style="text-decoration: none">Aditya Balu</a>, <a style="text-decoration: none">Ethan Herron</a>, <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Sergio Botelho, <a style="text-decoration: none">Santi Adavani</a>, <a style="text-decoration: none">Soumik Sarkar</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian</a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Workshop on AI for Design and Manufacturing at AAAI 2022</i>
-            <br>
-            [<a href="https://openreview.net/forum?id=BJSHAXe-XZz" style="text-decoration: none">OpenReview</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Multigrid Distributed Deep CNNs for Structural Topology Optimization</strong><br>
+                <span>Jaydeep Rade</span>, <span>Aditya Balu</span>, <span>Ethan Herron</span>,
+                <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Sergio Botelho</span>, <span>Santi Adavani</span>, <span>Soumik Sarkar</span>,
+                <span>Baskar Ganapathysubramanian</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>Workshop on AI for Design and Manufacturing at AAAI 2022</i><br>
+                [<a href="https://openreview.net/forum?id=BJSHAXe-XZz" target="_blank" rel="noopener">OpenReview</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Fast Unsupervised Generative Design for Structural Topology Optimization</strong>
-            <br>
-            <a style="text-decoration: none">Ethan Herron</a>, <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Jaydeep Rade</a>, <a style="text-decoration: none">Xian Yeow Lee</a>, <a style="text-decoration: none">Aditya Balu, <a style="text-decoration: none">Adarsh Krishnamurthy</a></a>, and <a style="text-decoration: none">Soumik Sarkar</a>
-            <br>
-            <i>Workshop on AI for Design and Manufacturing at AAAI 2022</i>
-            <br>
-            [<a href="https://openreview.net/forum?id=r7-mkF0QOCr" style="text-decoration: none">OpenReview</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Fast Unsupervised Generative Design for Structural Topology Optimization</strong><br>
+                <span>Ethan Herron</span>, <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Jaydeep Rade</span>, <span>Xian Yeow Lee</span>, <span>Aditya Balu</span>,
+                <span>Adarsh Krishnamurthy</span>, and <span>Soumik Sarkar</span><br>
+                <i>Workshop on AI for Design and Manufacturing at AAAI 2022</i><br>
+                [<a href="https://openreview.net/forum?id=r7-mkF0QOCr" target="_blank" rel="noopener">OpenReview</a>]
             </td>
         </tr>
-
+        
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Deep Implicit Surface Reconstruction of 3D Plant Geometry from Point Cloud</strong>
-            <br>
-            <a style="text-decoration: none">Anjana Prasad</a>, <u>Anushrut Jignasu</u>, <a style="text-decoration: none">Zaki Jubery</a>, <a style="text-decoration: none">Soumik Sarkar</a>, <a style="text-decoration: none">Baskar Ganapathysubramanian, <a style="text-decoration: none">Aditya Balu</a></a>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Workshop on AI for Agriculture and Food Systems at AAAI 2022</i>
-            <br>
-            [<a href="https://openreview.net/forum?id=F4eTwol9qne" style="text-decoration: none">OpenReview</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Deep Implicit Surface Reconstruction of 3D Plant Geometry from Point Cloud</strong><br>
+                <span>Anjana Prasad</span>, <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                <span>Zaki Jubery</span>, <span>Soumik Sarkar</span>, <span>Baskar Ganapathysubramanian</span>,
+                <span>Aditya Balu</span>, and <span>Adarsh Krishnamurthy</span><br>
+                <i>Workshop on AI for Agriculture and Food Systems at AAAI 2022</i><br>
+                [<a href="https://openreview.net/forum?id=F4eTwol9qne" target="_blank" rel="noopener">OpenReview</a>]
             </td>
         </tr>
-
+        
         <tr>
             <td>
                 <h3>2021</h3>
             </td>
         </tr>
-
         <tr>
-            <td colspan="4" valign="middle" style="padding-bottom: 20px;"><strong>Direct 3D Printing of Multi-level Voxel Models</strong>
-            <br>
-            <a style="text-decoration: none">Sambit Ghadai</a>, <u>Anushrut Jignasu</u>, and <a style="text-decoration: none">Adarsh Krishnamurthy</a>
-            <br>
-            <i>Accepted to Additive Manufacturing Journal, 2021</i>
-            <br>
-            [<a href="https://www.sciencedirect.com/science/article/pii/S2214860421000944" style="text-decoration: none">Journal</a>]
-            <br>
+            <td colspan="4" valign="middle" style="padding-bottom: 20px;">
+                <strong>Direct 3D Printing of Multi-level Voxel Models</strong><br>
+                <span>Sambit Ghadai</span>, <span style="color: var(--link); font-weight:600;">Anushrut Jignasu</span>,
+                and <span>Adarsh Krishnamurthy</span><br>
+                <i>Accepted to Additive Manufacturing Journal, 2021</i><br>
+                [<a href="https://www.sciencedirect.com/science/article/pii/S2214860421000944" target="_blank" rel="noopener">Journal</a>]
             </td>
         </tr>
 
 
+
+<tr>
+    <td colspan="5">
+        <h2>Reviewer</h2>
+        <div class="reviewer">
+            <div>
+                <strong>Conferences</strong>
+                <ul style="margin-top: 8px; padding-left: 20px;">
+                    <li>NeurIPS 2025</li>
+                    <li>ICLR 2025</li>
+                    <li>BMVC 2025</li>
+                    <li>Solid and Physical Modeling (SPM) 2025</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Journals</strong>
+                <ul style="margin-top: 8px; padding-left: 20px;">
+                    <li>Transactions on Machine Learning Research (TMLR)</li>
+                    <li>Engineering Applications of Artificial Intelligence (EAAI)</li>
+                    <li>Journal of Intelligent Manufacturing</li>
+                </ul>
+            </div>
+        </div>
+    </td>
+</tr>
+        
         <tr>
             <td colspan="5">
                 <h5>Template: <a href="https://czq142857.github.io/" style="text-decoration: none">Zhiqin Chen</a></h5>
