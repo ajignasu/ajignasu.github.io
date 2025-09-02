@@ -3,13 +3,23 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Anushrut Jignasu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="website icon link" />
+
+
     <style>
+        /* iOS text autosize + box model + no sideways scroll */
+        html { -webkit-text-size-adjust: 100%; }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden; }
+        
+        /* make all images responsive by default */
+        img { max-width: 100%; height: auto; }
+        p, a, td, h1, h2, h3 { word-wrap: break-word; overflow-wrap: anywhere; }
         :root {
             --text: #111;
             --muted: #555;
@@ -24,6 +34,9 @@
             background: #fff;
             color: var(--text);
         }
+        
+        table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+        td, th { vertical-align: top; }
 
         .main-content {
             font-family: Montserrat, sans-serif;
@@ -98,7 +111,7 @@
         }
 
         .avatar-cell {
-            width: 340px;
+            width: auto;
         }
 
         /* a little wider than 320 to breathe */
@@ -125,6 +138,7 @@
         /* Let the advisor link wrap; hide the table spacer */
         .advisor { white-space: normal; }
         .spacing { display: none; }
+        td {padding: 10px 0;}
 
         /* Headings scale */
         h1 { font-size: 28px; }
