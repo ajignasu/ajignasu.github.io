@@ -11,53 +11,169 @@
     <link rel="shortcut icon" href="website icon link" />
     <style>
         :root {
-        --text: #111;
-        --muted: #555;
-        --link: #004fff;
-        --card-gap: 20px;
+            --text: #111;
+            --muted: #555;
+            --link: #004fff;
+            --card-gap: 20px;
         }
-        html, body { margin: 0; padding: 0; background: #fff; color: var(--text); }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: var(--text);
+        }
+
         .main-content {
-        font-family: Montserrat, sans-serif;
-        font-size: 20px;
-        line-height: 1.6;
-        max-width: 980px;
-        margin: 5% auto 8%;
-        padding: 0 20px;
+            font-family: Montserrat, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 980px;
+            width: 100%;
+            margin: 5% auto 8%;
+            padding: 0 20px;
         }
-        a { color: var(--link); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .spacing { padding: 0 20px; }
-        h1 { font-size: 34px; margin: 0 0 6px; }
-        h2 { font-size: 28px; margin: 32px 0 10px; }
-        h3 { margin: 16px 0 6px; }
+
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .spacing {
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 34px;
+            margin: 0 0 6px;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 32px 0 10px;
+        }
+
+        h3 {
+            margin: 16px 0 6px;
+        }
+
         .publication-venue {
-        font-size: 18px;
-        font-style: italic;
-        margin-bottom: 10px;
-        color: var(--muted);
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--muted);
         }
+
         /* Reviewer section layout */
         .reviewer {
-        display: flex; gap: 50px; font-size: 18px; flex-wrap: wrap;
+            display: flex;
+            gap: 50px;
+            font-size: 18px;
+            flex-wrap: wrap;
         }
-        .reviewer > div { min-width: 260px; }
+
+        .reviewer>div {
+            min-width: 260px;
+        }
+
         .header-grid {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 20px;
-        align-items: start;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            align-items: start;
         }
+
         .avatar {
-        height: 296px; width: 320px; border-radius: 50%; object-fit: cover;
+            width: 320px;
+            /* fixed on wide screens */
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
         }
+
+        .avatar-cell {
+            width: 340px;
+        }
+
+        /* a little wider than 320 to breathe */
+
         .advisor {
-        white-space: nowrap;
-        color: var(--link);
-        text-decoration: none;
+            white-space: nowrap;
+            color: var(--link);
+            text-decoration: none;
         }
-  </style>
+
+        /* ===== Mobile adjustments (≤ 768px) ===== */
+        @media (max-width: 768px) {
+            .main-content {
+                font-size: 16px;
+                margin: 20px auto;
+                padding: 0 12px;
+            }
+
+            /* Stack table layout vertically */
+            table {
+                width: 100%;
+                display: block;
+            }
+
+            tr {
+                display: block;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            /* Headings scale */
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            /* Reviewer columns stack */
+            .reviewer {
+                gap: 20px;
+            }
+
+            .reviewer>div {
+                min-width: auto;
+            }
+
+            /* Avatar responsive + centered */
+            .avatar {
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .avatar-cell {
+                width: 100%;
+            }
+
+            /* Hide the spacer column on phones */
+            .spacing {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 
 
 <body>
@@ -83,8 +199,8 @@
                 <p style="color:rgb(0, 81, 255);"><b>I am seeking full-time positions (December 2025 onwards)&mdash;feel free to reach out!</b></p>
             </td>
             <td class="spacing"></td>
-            <td colspan="1" align="center">
-                <img src="imgs/portrait.png" style="height: 296px; width: 320px; border-radius: 50%; object-fit: cover;" align="center" />
+            <td colspan="1" align="center" class="avatar-cell">
+                <img src="imgs/portrait.png" class="avatar" alt="Portrait of Anushrut Jignasu" />
             </td>
         </tr>
 
