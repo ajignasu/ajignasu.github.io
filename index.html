@@ -111,65 +111,29 @@
 
         /* ===== Mobile adjustments (≤ 768px) ===== */
         @media (max-width: 768px) {
-            .main-content {
-                font-size: 16px;
-                margin: 20px auto;
-                padding: 0 12px;
-            }
+        .main-content {
+            font-size: 16px;
+            margin: 20px auto;
+            padding: 0 12px;
+        }
 
-            /* Stack table layout vertically */
-            table {
-                width: 100%;
-                display: block;
-            }
+        /* Header grid collapses to one column */
+        .header-grid { grid-template-columns: 1fr; }
+        .avatar { width: 100%; max-width: 320px; margin: 0 auto; }
+        .avatar-cell { width: 100%; }
 
-            tr {
-                display: block;
-            }
+        /* Let the advisor link wrap; hide the table spacer */
+        .advisor { white-space: normal; }
+        .spacing { display: none; }
 
-            td {
-                display: block;
-                width: 100%;
-                padding: 10px 0;
-            }
+        /* Headings scale */
+        h1 { font-size: 28px; }
+        h2 { font-size: 22px; }
+        h3 { font-size: 18px; }
 
-            /* Headings scale */
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-
-            /* Reviewer columns stack */
-            .reviewer {
-                gap: 20px;
-            }
-
-            .reviewer>div {
-                min-width: auto;
-            }
-
-            /* Avatar responsive + centered */
-            .avatar {
-                width: 100%;
-                max-width: 320px;
-                margin: 0 auto;
-            }
-
-            .avatar-cell {
-                width: 100%;
-            }
-
-            /* Hide the spacer column on phones */
-            .spacing {
-                display: none;
-            }
+        /* Reviewer columns stack */
+        .reviewer { gap: 20px; }
+        .reviewer > div { min-width: auto; }
         }
     </style>
 </head>
@@ -179,31 +143,29 @@
 <body>
 
 <div class="main-content">
+    <div class="header-grid">
+        <div>
+            <h2>Anushrut Jignasu</h2>
+            Email: <a href="mailto:ajignasu@iastate.edu">ajignasu@iastate.edu</a><br>
+            <a href="https://scholar.google.com/citations?user=Gb_YM5oAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a> /
+            <a href="https://github.com/ajignasu" target="_blank" rel="noopener">GitHub</a> /
+            <a href="files/CV.pdf" target="_blank" rel="noopener">CV</a>
+            <br><br>
+            I am a PhD candidate at Iowa State University, advised by
+            <a href="https://web.me.iastate.edu/idealab/p-krishnamurthy.html" class="advisor">Prof. Adarsh&nbsp;Krishnamurthy</a>.
+            <br><br>
+            My research lies at the intersection of computer vision, computer graphics, and machine learning. Specifically, I work on neural fields, 3D reconstruction, CAD, large language models for
+            geometric reasoning, and additive manufacturing.
+            <br><br>
+            <p style="color:rgb(0, 81, 255);"><b>
+                    I am seeking full-time positions (December 2025 onwards)&nbsp;&mdash; feel free to reach out!
+                </b></p>
+        </div>
+        <div class="avatar-cell" align="center">
+            <img src="imgs/portrait.png" class="avatar" alt="Portrait of Anushrut Jignasu">
+        </div>
+    </div>
     <table style="font-size:18px;">
-        <tr>
-            <td colspan="3" valign="top">
-                <h2> Anushrut Jignasu </h2>
-                Email: <a href="mailto:ajignasu@iastate.edu">ajignasu@iastate.edu</a>
-
-                <br>
-                <a href="https://scholar.google.com/citations?user=Gb_YM5oAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a> /
-                <a href="https://github.com/ajignasu" target="_blank" rel="noopener">GitHub</a> /
-                <a href="files/CV.pdf" target="_blank" rel="noopener">CV</a>
-                <br><br>
-                I am a PhD candidate at Iowa State University, advised by
-                <a href="https://web.me.iastate.edu/idealab/p-krishnamurthy.html" class="advisor">Prof. Adarsh&nbsp;Krishnamurthy</a>.
-
-                <br><br>
-                My research lies at the intersection of computer vision, computer graphics, and machine learning. Specifically, I work on neural fields, 3D reconstruction, CAD, large language models for geometric reasoning, and additive manufacturing.
-                <br><br>
-                <p style="color:rgb(0, 81, 255);"><b>I am seeking full-time positions (December 2025 onwards)&mdash;feel free to reach out!</b></p>
-            </td>
-            <td class="spacing"></td>
-            <td colspan="1" align="center" class="avatar-cell">
-                <img src="imgs/portrait.png" class="avatar" alt="Portrait of Anushrut Jignasu" />
-            </td>
-        </tr>
-
         <tr>
             <td colspan="5">
                 <h2>Work Experience</h2>
